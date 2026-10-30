@@ -1,0 +1,87 @@
+Part I: Proxy Pattern
+
+Q01 [Output Trace] Lazy Initialization
+Answer: Loaded Open Open
+
+Q02 [1-Line Code] Check Before Loading
+if (realImage == null) realImage = new RealImage();
+
+Q03 [Concept] Primary Purpose
+Answer:B) Delay creating a heavy object until needed
+
+Q04 [Output Trace] Constructor vs Method Call
+Answer: ProxyReady
+
+Q08 [Logging Proxy] Output Trace
+Answer: START- TASK - END
+
+Q09 [1-Line Code] Logging Before Action FILL-IN-LINE
+System.out.print("Saving file... ");
+
+Q10 [Caching Proxy] Trace Calls
+Answer: SLOW_CALC
+
+Q11 [Bug Hunt] Spot the NullPointerException
+Answer:
+Exception thrown: NullPointerException
+Reason in 4 words: real is never initialized4
+
+Q12 [Code Fix] Fix the Bug
+if (real == null) real = new RealWorker();
+
+Q13 [Remote Proxy] Concept MULTIPLE CHOICE
+Answer:A) Network and socket communication details
+
+Part II: Bridge Pattern
+
+Q16 [Class Count Math] Avoiding Combinatorial Explosion
+Answer:
+1) 3 × 4 = 12
+2) 3 + 4 = 7
+
+Q17 [Concept] OOP Relationship
+Answer:B) Composition over inheritance (has-a)
+
+Q18 [Role Identification] Anatomy of Bridge
+Answer:
+Abstraction: RemoteControl
+Implementor: Device
+
+Q19 [1-Line Code] Constructor Assignment
+Answer:this.device = device;
+
+Q20 [1-Line Code] Bridge Delegation Call
+Answer:device.turnOn();
+
+Q21 [Output Trace] Basic Bridge Execution
+Answer: TV- ON RADIO- ON
+
+Q23 [Runtime Swapping] Changing Implementor
+Answer: TV- ON RADIO- ON
+
+Q24 [Code Completion] Refined Abstraction Call
+Answer:
+device.setVolume(0);
+
+Q25 [Bug Spotting] Hardcoding Defeats the Bridge
+Answer: It prevents you from passing in any other Device implementation it hardcodes the abstraction to a single implementor.
+
+Q26 [Bridge vs Adapter] Timing
+Answer:B) Bridge Pattern
+
+Q27 [Output Trace] Shape + Color Bridge
+Answer: CIRCLE-RED CIRCLE-BLUE
+
+Q28 [1-Line Code] Color Interface Definition
+Answer:
+String getHex();
+
+
+
+
+
+
+
+
+
+
